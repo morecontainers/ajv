@@ -10,7 +10,7 @@ The service comes with configuration options in config/default.json.
 
 ### Example
 
-    $ CID=$(docker run --name=ajv -d --rm -p 80:80 morecontainers/ajv:0.12.3)
+    $ CID=$(docker run --name=ajv -d --rm -p 80:80 morecontainers/ajv:20211203)
     a086faca55b1962fd45b4ac856329731095902d3b5e56e22a3075710d87e262b0
     $ docker logs $CID
     

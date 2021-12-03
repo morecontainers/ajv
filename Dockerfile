@@ -1,4 +1,4 @@
-FROM    node:16 AS production
+FROM    node:16-slim AS production
 EXPOSE  80
 COPY    .       /app/
 WORKDIR /app
