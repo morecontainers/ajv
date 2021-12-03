@@ -1,0 +1,19 @@
+version: '2.4'
+
+services:
+  production:
+    image: morecontainers/ajv:0.12.3
+    build:
+      context: .
+      target: production
+  development:
+    hostname: ajv
+    container_name: ajv
+    build:
+      context: .
+      target: development
+    working_dir: $PWD
+    environment:
+      HOME: $HOME
+    volumes:
+      - $HOME:$HOME
