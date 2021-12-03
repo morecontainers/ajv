@@ -1,7 +1,7 @@
 {
   "name": "ajv-json-schema-validator",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.12.3",
+  "description": "Ajv JSON schema validator",
   "type": "module",
   "main": "app/app.js",
   "dependencies": {

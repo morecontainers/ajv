@@ -1,7 +1,7 @@
 FROM    node:16 AS production
 EXPOSE  80
+COPY    .       /app/
 WORKDIR /app
-COPY    package.json package-lock.json app config schemas ./
 RUN     npm ci
 CMD     ["npm","start"]
 

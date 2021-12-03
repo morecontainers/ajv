@@ -33,7 +33,7 @@ function load(root) {
 function register(schemas) {
   for (const schema in schemas) {
     const endpoint = `/${schema}`
-    console.log(`registrying endpoint ${endpoint}`)
+    console.log(`Registering endpoint ${endpoint}`)
     app.post(endpoint, function (req, res) {
       console.debug(req.body)
       if (!ajv.validate(schemas[schema], req.body)) {
