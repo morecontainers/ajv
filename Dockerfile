@@ -6,6 +6,6 @@ RUN     npm ci
 CMD     ["npm","start"]
 
 FROM    node:16-alpine AS development
-EXPOSE  80
+EXPOSE  8080
 RUN     apk add bash fish zsh zsh-vcs util-linux git-lfs
 CMD     ["sleep","inf"]

@@ -38,10 +38,11 @@ function register(schemas) {
       console.debug(req.body)
       if (!ajv.validate(schemas[schema], req.body)) {
         console.log(ajv.errors)
-        res.contentType('text/plain')
-        res.status(418).send(ajv.errors.map(o=>`${o.instancePath}: ${o.message}`).join("\n"));
+        res.contentType('application/json')
+        res.status(418).send(ajv.errors)
       } else {
-        res.sendStatus(200)
+        res.contentType('application/json')
+        res.status(200).send(req.body)
       }
     })
   }

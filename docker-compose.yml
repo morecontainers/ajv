@@ -2,7 +2,7 @@ version: '2.4'
 
 services:
   production:
-    image: morecontainers/ajv:20211203
+    image: morecontainers/ajv:v20211224
     build:
       context: .
       target: production
